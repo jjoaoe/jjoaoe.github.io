@@ -1,1 +1,134 @@
-function _0xa413(){var _0x35dcef=['4763058eHnNQu','R$60','selectedIndex','SilverFull','change','R$25','concat','R$55','R$49','DiamantePlus','#partidas','4661270UXZlMY','PlatinaPlus','6105988XNkGtZ','partidas','Ascendente','4jwKHtB','R$597','R$70','R$20','Olá,%20estou%20no%20site%20e%20quero%20comprar%20uma%20conta%20\x20','R$299','value','R$45','Silver','R$94','R$120','867882gWnCRc','PlatinaFull','SemEloFull','32274108MdSNjz','GoldFull','AscendenteFull','R$80','BronzeFull','R$50','R$128','Diamante','ImortalFull','BronzePlus','4000936VHlxXI','options','R$40','FerroPlus','Gold','Platina','GoldPlus','36111QjOPWH','R$29','#price','valor','Bronze','R$30','\x20%20no%20valor%20de%20\x20','DiamanteFull','ImortalPlus','FerroFull','64oqbYCC'];_0xa413=function(){return _0x35dcef;};return _0xa413();}var _0x3c3f64=_0x112b;function _0x112b(_0x515180,_0x5c08f6){var _0xa41349=_0xa413();return _0x112b=function(_0x112b65,_0x5d2268){_0x112b65=_0x112b65-0x13c;var _0x2d4bd7=_0xa41349[_0x112b65];return _0x2d4bd7;},_0x112b(_0x515180,_0x5c08f6);}(function(_0x36c74f,_0x567a0a){var _0x203eee=_0x112b,_0x443bec=_0x36c74f();while(!![]){try{var _0x2f6f5d=parseInt(_0x203eee(0x164))/0x1*(parseInt(_0x203eee(0x16e))/0x2)+-parseInt(_0x203eee(0x16f))/0x3+parseInt(_0x203eee(0x145))/0x4*(-parseInt(_0x203eee(0x140))/0x5)+parseInt(_0x203eee(0x150))/0x6+-parseInt(_0x203eee(0x142))/0x7+-parseInt(_0x203eee(0x15d))/0x8+parseInt(_0x203eee(0x153))/0x9;if(_0x2f6f5d===_0x567a0a)break;else _0x443bec['push'](_0x443bec['shift']());}catch(_0x4df25e){_0x443bec['push'](_0x443bec['shift']());}}}(_0xa413,0xf2a4e));function whats(){var _0x41c73f=_0x112b,_0x423e02=get_value_and_plan(),_0x1ec47f=_0x41c73f(0x149)+_0x423e02[_0x41c73f(0x143)]+_0x41c73f(0x16a)+_0x423e02[_0x41c73f(0x167)],_0x3c38ba='https://api.whatsapp.com/send?1=pt_BR&phone=551132308225&text='[_0x41c73f(0x175)](_0x1ec47f);window['open'](_0x3c38ba);}$(_0x3c3f64(0x13f))[_0x3c3f64(0x173)](function(){var _0xec44c=_0x3c3f64,_0x2a885d=get_value_and_plan();$(_0xec44c(0x166))['html'](_0x2a885d['valor']);});function get_value_and_plan(){var _0x96cdc1=_0x3c3f64,_0x2d8858=document['getElementById'](_0x96cdc1(0x143)),_0xcb06ee=_0x2d8858[_0x96cdc1(0x15e)][_0x2d8858[_0x96cdc1(0x171)]][_0x96cdc1(0x14b)];if(_0xcb06ee=='Ferro')var _0x25471b=_0x96cdc1(0x165);else{if(_0xcb06ee==_0x96cdc1(0x160))var _0x25471b='R$49';else{if(_0xcb06ee==_0x96cdc1(0x16d))var _0x25471b=_0x96cdc1(0x14e);else{if(_0xcb06ee==_0x96cdc1(0x15c))var _0x25471b=_0x96cdc1(0x15f);else{if(_0xcb06ee==_0x96cdc1(0x168))var _0x25471b=_0x96cdc1(0x148);else{if(_0xcb06ee==_0x96cdc1(0x157))var _0x25471b=_0x96cdc1(0x14e);else{if(_0xcb06ee=='SilverPlus')var _0x25471b=_0x96cdc1(0x14c);else{if(_0xcb06ee==_0x96cdc1(0x14d))var _0x25471b=_0x96cdc1(0x174);else{if(_0xcb06ee==_0x96cdc1(0x172))var _0x25471b='R$94';else{if(_0xcb06ee==_0x96cdc1(0x163))var _0x25471b='R$50';else{if(_0xcb06ee==_0x96cdc1(0x161))var _0x25471b=_0x96cdc1(0x169);else{if(_0xcb06ee==_0x96cdc1(0x154))var _0x25471b=_0x96cdc1(0x14e);else{if(_0xcb06ee==_0x96cdc1(0x141))var _0x25471b=_0x96cdc1(0x13c);else{if(_0xcb06ee==_0x96cdc1(0x162))var _0x25471b='R$35';else{if(_0xcb06ee==_0x96cdc1(0x151))var _0x25471b=_0x96cdc1(0x14e);else{if(_0xcb06ee==_0x96cdc1(0x13e))var _0x25471b=_0x96cdc1(0x147);else{if(_0xcb06ee==_0x96cdc1(0x15a))var _0x25471b=_0x96cdc1(0x15f);else{if(_0xcb06ee==_0x96cdc1(0x16b))var _0x25471b=_0x96cdc1(0x14e);else{if(_0xcb06ee=='AscendentePlus')var _0x25471b=_0x96cdc1(0x156);else{if(_0xcb06ee==_0x96cdc1(0x144))var _0x25471b=_0x96cdc1(0x158);else{if(_0xcb06ee==_0x96cdc1(0x155))var _0x25471b=_0x96cdc1(0x14e);else{if(_0xcb06ee==_0x96cdc1(0x16c))var _0x25471b=_0x96cdc1(0x14f);else{if(_0xcb06ee=='Imortal')var _0x25471b=_0x96cdc1(0x170);else{if(_0xcb06ee==_0x96cdc1(0x15b))var _0x25471b=_0x96cdc1(0x159);else{if(_0xcb06ee=='r')var _0x25471b=_0x96cdc1(0x14a);else{if(_0xcb06ee=='SemEloSmurf')var _0x25471b='R$14.90';else{if(_0xcb06ee==_0x96cdc1(0x152))var _0x25471b=_0x96cdc1(0x13d);else{if(_0xcb06ee=='Skins3')var _0x25471b=_0x96cdc1(0x146);}}}}}}}}}}}}}}}}}}}}}}}}}}}return{'valor':_0x25471b,'partidas':_0xcb06ee};}
+function whats() {    
+    var config = get_value_and_plan()
+
+    var text = `${config["partidas"]}`
+    var url = 'https://mpago.la/'.concat(text);
+
+    window.open(url);
+}
+
+// https://mpago.la/17j16Hw
+
+$('#partidas').change(function() {
+    var config = get_value_and_plan()
+    $('#price').html(config["valor"])
+});
+
+function get_value_and_plan() {
+    var select = document.getElementById('partidas');
+    var partidas = select.options[select.selectedIndex].value;
+
+    if (partidas == 'Ferro') {
+        var valor = 'R$29'
+    }
+    
+    else if (partidas == 'FerroPlus') {
+        var valor = 'R$49'
+    }
+    
+    else if (partidas == 'FerroFull') {
+        var valor = 'R$94'
+    }
+    
+    else if (partidas == 'BronzePlus') {
+        var valor = 'R$40'
+    }
+    
+    else if (partidas == 'Bronze') {
+        var valor = 'R$20'
+    }
+    
+    else if (partidas == 'BronzeFull') {
+        var valor = 'R$94'
+    }
+    
+    else if (partidas == 'SilverPlus') {
+        var valor = 'R$45'
+    }
+    
+    else if (partidas == 'Silver') {
+        var valor = 'R$25'
+    }
+    
+    else if (partidas == 'SilverFull') {
+        var valor = 'R$94'
+    }
+    
+    else if (partidas == 'GoldPlus') {
+        var valor = 'R$50'
+    }
+    
+    else if (partidas == 'Gold') {
+        var valor = 'R$30'
+    }
+    
+    else if (partidas == 'GoldFull') {
+        var valor = 'R$94'
+    }
+    
+    else if (partidas == 'PlatinaPlus') {
+        var valor = 'R$55'
+    }
+    
+    else if (partidas == 'Platina') {
+        var valor = 'R$35'
+    }
+    
+    else if (partidas == 'PlatinaFull') {
+        var valor = 'R$94'
+    }
+    
+    else if (partidas == 'DiamantePlus') {
+        var valor = 'R$70'
+    }
+    
+    else if (partidas == 'Diamante') {
+        var valor = 'R$40'
+    }
+    
+    else if (partidas == 'DiamanteFull') {
+        var valor = 'R$94'
+    }
+
+    else if (partidas == 'AscendentePlus') {
+        var valor = 'R$80'
+    }
+
+    else if (partidas == 'Ascendente') {
+        var valor = 'R$50'
+    }
+    
+    else if (partidas == 'AscendenteFull') {
+        var valor = 'R$94'
+    }    
+    
+    else if (partidas == 'ImortalPlus') {
+        var valor = 'R$120'
+    }
+    
+    else if (partidas == 'Imortal') {
+        var valor = 'R$60'
+    }
+    
+    else if (partidas == 'ImortalFull') {
+        var valor = 'R$128'
+    }
+    
+    else if (partidas == 'r') {
+        var valor = 'R$299'
+    }
+    
+    else if (partidas == '17j16Hw') {
+        var valor = 'R$14.90'
+    }
+    
+    else if (partidas == 'SemEloFull') {
+        var valor = 'R$49'
+    }
+    
+    else if (partidas == 'Skins3') {
+        var valor = 'R$597'
+    }
+
+    return {"valor": valor, "partidas": partidas}
+}

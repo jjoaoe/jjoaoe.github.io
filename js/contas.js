@@ -7,8 +7,6 @@ function whats() {
     window.open(url);
 }
 
-// https://mpago.la/17j16Hw
-
 $('#partidas').change(function() {
     var config = get_value_and_plan()
     $('#price').html(config["valor"])
@@ -18,7 +16,8 @@ function get_value_and_plan() {
     var select = document.getElementById('partidas');
     var partidas = select.options[select.selectedIndex].value;
 
-    if (partidas == 'Ferro') {
+    // Conta Ferro
+    if (partidas == '1WyQRsC') {
         var valor = 'R$29'
     }
     
@@ -33,8 +32,9 @@ function get_value_and_plan() {
     else if (partidas == 'BronzePlus') {
         var valor = 'R$40'
     }
-    
-    else if (partidas == 'Bronze') {
+
+    // Conta Bronze
+    else if (partidas == '2pNZ38n') {
         var valor = 'R$20'
     }
     
@@ -46,7 +46,8 @@ function get_value_and_plan() {
         var valor = 'R$45'
     }
     
-    else if (partidas == 'Silver') {
+    // Conta Prata
+    else if (partidas == '1nbWDSn') {
         var valor = 'R$25'
     }
     
@@ -58,7 +59,8 @@ function get_value_and_plan() {
         var valor = 'R$50'
     }
     
-    else if (partidas == 'Gold') {
+    // Conta Ouro
+    else if (partidas == '2Se3YAB') {
         var valor = 'R$30'
     }
     
@@ -70,7 +72,8 @@ function get_value_and_plan() {
         var valor = 'R$55'
     }
     
-    else if (partidas == 'Platina') {
+    // Conta Platina
+    else if (partidas == '122YuJR') {
         var valor = 'R$35'
     }
     
@@ -82,7 +85,8 @@ function get_value_and_plan() {
         var valor = 'R$70'
     }
     
-    else if (partidas == 'Diamante') {
+    // Conta Diamante
+    else if (partidas == '2CXXrF4') {
         var valor = 'R$40'
     }
     
@@ -94,7 +98,8 @@ function get_value_and_plan() {
         var valor = 'R$80'
     }
 
-    else if (partidas == 'Ascendente') {
+    // Conta Acendente
+    else if (partidas == '1SaFdAY') {
         var valor = 'R$50'
     }
     
@@ -118,15 +123,18 @@ function get_value_and_plan() {
         var valor = 'R$299'
     }
     
+    // Conta Básica
     else if (partidas == '17j16Hw') {
         var valor = 'R$14.90'
     }
     
-    else if (partidas == 'SemEloFull') {
+    // Conta FA Ranked Liberada
+    else if (partidas == '2X73zVH') {
         var valor = 'R$49'
     }
     
-    else if (partidas == 'Skins3') {
+    // Anúncio Conta Skins #01
+    else if (partidas == 'Skins1') {
         var valor = 'R$597'
     }
 

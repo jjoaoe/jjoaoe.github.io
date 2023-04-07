@@ -23,7 +23,7 @@ function get_value_and_plan() {
     
     // Conta Ferro
     else if (partidas == '1WyQRsC') {
-        var valor = 'R$49'
+        var valor = 'R$34'
     }
     
     // Conta Bronze

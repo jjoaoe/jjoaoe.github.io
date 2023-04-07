@@ -32,10 +32,14 @@
     </script>
     <!-- <script src="//code.jivosite.com/widget/EjI29ihL5U" async></script> -->
  
-<!-- Choices -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-	  <!-- End Choices -->
+<!-- nice select -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+
+	  <!-- End nice select -->
 	  
   </head>
   <style>
@@ -190,7 +194,7 @@
                         <div class="col-md-12">
                           <div class="form-group">
 				  <form>
-                            <select id="partidas" name="ct" data-choices type="select-one">
+                            <select id="partidas" name="ct" class="nice-select">
                                <option value="none" disabled>// CONTAS BÁSICAS</option> 
                               <option selected="" value="17j16Hw">Conta Sem Elo (Ranked Liberada)</option>
                               <option value="none2" disabled>// CONTAS POR ELO</option>
@@ -322,23 +326,19 @@
     <script src="/js/init.js"></script>
     <script src="/js/contas.js"></script>
 	    
-    <!-- Choices Imagens -->
+    <!-- niceselect script + styles -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const choices = new Choices('#my-select', {
-      itemSelectText: '',
-      callbackOnInit: function() {
-        const choicesList = this.choiceList.element;
-        this.passedElement.element.querySelectorAll('option').forEach(function(option, index) {
-          if (option.dataset.imgSrc) {
-            const listItem = choicesList.querySelector(`[data-id="${index + 1}"]`);
-            const img = document.createElement('img');
-            img.src = option.dataset.imgSrc;
-            img.classList.add('img-icon');
-            listItem.insertBefore(img, listItem.firstChild);
-          }
-        });
-      },
+  $(document).ready(function() {
+    $('select.nice-select').niceSelect();
+    
+    $('select.nice-select option').each(function() {
+      const imgSrc = $(this).data('img-src');
+      if (imgSrc) {
+        const text = $(this).text();
+        const img = '<img src="' + imgSrc + '" class="img-icon" /> ';
+        const listItem = $('.nice-select .list .option[data-value="' + $(this).val() + '"]');
+        listItem.html(img + text);
+      }
     });
   });
 </script>
@@ -350,6 +350,7 @@
     margin-right: 5px;
   }
 </style>
+
 
 	    <!-- Fim Choices Imagens -->
 	    

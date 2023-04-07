@@ -332,7 +332,7 @@
     $('select.nice-select').niceSelect();
     
     $('select.nice-select option').each(function() {
-      const imgSrc = $(this).data('img-src');
+      const imgSrc = $(this).attr('data-img-src');
       if (imgSrc) {
         const text = $(this).text();
         const img = '<img src="' + imgSrc + '" class="img-icon" /> ';
@@ -342,6 +342,7 @@
     });
   });
 </script>
+
 <style>
   .img-icon {
     width: 16px;

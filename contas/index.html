@@ -32,10 +32,10 @@
     </script>
     <!-- <script src="//code.jivosite.com/widget/EjI29ihL5U" async></script> -->
  
-<!-- Select2 -->
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-	  <!-- End Select2 -->
+<!-- Choices -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+	  <!-- End Choices -->
 	  
   </head>
   <style>
@@ -189,7 +189,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <select id="my-select" name="ct" class="form-control">
+                            <select id="partidas" name="ct" class="form-control" data-choices>
                                <option value="none" disabled>// CONTAS BÁSICAS</option> 
                               <option selected="" value="17j16Hw">Conta Sem Elo (Ranked Liberada)</option>
                               <option value="none2" disabled>// CONTAS POR ELO</option>
@@ -320,29 +320,27 @@
     <script src="/js/init.js"></script>
     <script src="/js/contas.js"></script>
 	    
-    <!-- Select2 Imagens -->
-    <script>
-  $(document).ready(function() {
-    function formatOption(option) {
-      if (!option.id) {
-        return option.text;
-      }
-      const imgSrc = $(option.element).data('img-src');
-      const optionTemplate = $('<span><img src="' + imgSrc + '" class="img-icon" /> ' + option.text + '</span>');
-      return optionTemplate;
-    }
-
-    $('#my-select').select2({
-      templateResult: formatOption,
-      templateSelection: formatOption,
-      escapeMarkup: function(markup) {
-        return markup;
+    <!-- Choices Imagens -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const choices = new Choices('#my-select', {
+      itemSelectText: '',
+      callbackOnInit: function() {
+        const choicesList = this.choiceList.element;
+        this.passedElement.element.querySelectorAll('option').forEach(function(option, index) {
+          if (option.dataset.imgSrc) {
+            const listItem = choicesList.querySelector(`[data-id="${index + 1}"]`);
+            const img = document.createElement('img');
+            img.src = option.dataset.imgSrc;
+            img.classList.add('img-icon');
+            listItem.insertBefore(img, listItem.firstChild);
+          }
+        });
       },
     });
   });
 </script>
-	    
-	    <style>
+<style>
   .img-icon {
     width: 16px;
     height: 16px;
@@ -351,7 +349,7 @@
   }
 </style>
 
-	    <!-- Fim Select2 Imagens -->
+	    <!-- Fim Choices Imagens -->
 	    
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-filters">
       <filter id="duotone_base">

@@ -32,15 +32,6 @@
     </script>
     <!-- <script src="//code.jivosite.com/widget/EjI29ihL5U" async></script> -->
  
-<!-- nice select -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-
-
-	  <!-- End nice select -->
-	  
   </head>
   <style>
     .header-logo--img {
@@ -193,12 +184,11 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-				  <form>
-                            <select id="partidas" name="ct" class="nice-select">
+                            <select id="partidas" name="ct" class="form-control">
                                <option value="none" disabled>// CONTAS BÁSICAS</option> 
                               <option selected="" value="17j16Hw">Conta Sem Elo (Ranked Liberada)</option>
                               <option value="none2" disabled>// CONTAS POR ELO</option>
-                              <option class="option-with-icon" data-img-src="http://elovalorant.com.br/images/minielo/Ferro_3.png" value="1WyQRsC">Conta Smurf Ferro</option> 
+                              <option value="1WyQRsC">Conta Smurf Ferro</option> 
                               <option value="2pNZ38n">Conta Smurf Bronze</option> 
                               <option value="1nbWDSn">Conta Smurf Prata</option> 
 			      <option value="2Se3YAB">Conta Smurf Ouro</option>
@@ -222,7 +212,6 @@
 														<option selected="" value="b1">Bronze 1</option><option value="b2">Bronze 2</option><option value="b3">Bronze 3</option><option value="s1">Prata 1</option><option value="s2">Prata 2</option><option value="s3">Prata 3</option><option value="g1">Ouro 1</option><option value="g2">Ouro 2</option><option value="g3">Ouro 3</option><option value="p1">Platina 1</option><option value="p2">Platina 2</option><option value="p3">Platina 3</option><option value="d1">Diamante 1</option><option value="d2">Diamante 2</option><option value="d3">Diamante 3</option><option value="i1">Imortal 1</option><option value="i2">Imortal 2</option><option value="i3">Imortal 3</option><option value="r">Radiante</option>
 -->
                             </select>
-				  </form>
                           </div>
                         </div>
                       </div>
@@ -325,35 +314,6 @@
     <script src="/js/core.js"></script>
     <script src="/js/init.js"></script>
     <script src="/js/contas.js"></script>
-	    
-    <!-- niceselect script + styles -->
-<script>
-  $(document).ready(function() {
-    $('select.nice-select').niceSelect();
-    
-    $('select.nice-select option.option-with-icon').each(function() {
-      const imgSrc = $(this).attr('data-img-src');
-      const text = $(this).text();
-      const img = '<img src="' + imgSrc + '" class="img-icon" /> ';
-      const listItem = $('.nice-select .list .option[data-value="' + $(this).val() + '"]');
-      listItem.html(img + text);
-    });
-  });
-</script>
-
-
-<style>
-  .img-icon {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-</style>
-
-
-	    <!-- Fim niceselect -->
-	    
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-filters">
       <filter id="duotone_base">
         <feColorMatrix type="matrix" result="grayscale" values="1 0 0 0 0

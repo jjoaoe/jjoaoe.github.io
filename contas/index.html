@@ -198,7 +198,7 @@
                                <option value="none" disabled>// CONTAS BÁSICAS</option> 
                               <option selected="" value="17j16Hw">Conta Sem Elo (Ranked Liberada)</option>
                               <option value="none2" disabled>// CONTAS POR ELO</option>
-                              <option data-img-src="http://elovalorant.com.br/images/minielo/Ferro_3.png" value="1WyQRsC">Conta Smurf Ferro</option> 
+                              <option class="option-with-icon" data-img-src="http://elovalorant.com.br/images/minielo/Ferro_3.png" value="1WyQRsC">Conta Smurf Ferro</option> 
                               <option value="2pNZ38n">Conta Smurf Bronze</option> 
                               <option value="1nbWDSn">Conta Smurf Prata</option> 
 			      <option value="2Se3YAB">Conta Smurf Ouro</option>
@@ -331,17 +331,16 @@
   $(document).ready(function() {
     $('select.nice-select').niceSelect();
     
-    $('select.nice-select option').each(function() {
+    $('select.nice-select option.option-with-icon').each(function() {
       const imgSrc = $(this).attr('data-img-src');
-      if (imgSrc) {
-        const text = $(this).text();
-        const img = '<img src="' + imgSrc + '" class="img-icon" /> ';
-        const listItem = $('.nice-select .list .option[data-value="' + $(this).val() + '"]');
-        listItem.html(img + text);
-      }
+      const text = $(this).text();
+      const img = '<img src="' + imgSrc + '" class="img-icon" /> ';
+      const listItem = $('.nice-select .list .option[data-value="' + $(this).val() + '"]');
+      listItem.html(img + text);
     });
   });
 </script>
+
 
 <style>
   .img-icon {
@@ -353,7 +352,7 @@
 </style>
 
 
-	    <!-- Fim Choices Imagens -->
+	    <!-- Fim niceselect -->
 	    
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-filters">
       <filter id="duotone_base">

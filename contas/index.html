@@ -32,6 +32,11 @@
     </script>
     <!-- <script src="//code.jivosite.com/widget/EjI29ihL5U" async></script> -->
  
+<!-- Select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>	  
+	  
   </head>
   <style>
     .header-logo--img {
@@ -188,7 +193,7 @@
                                <option value="none" disabled>// CONTAS BÁSICAS</option> 
                               <option selected="" value="17j16Hw">Conta Sem Elo (Ranked Liberada)</option>
                               <option value="none2" disabled>// CONTAS POR ELO</option>
-                              <option value="1WyQRsC">Conta Smurf Ferro</option> 
+                              <option data-img-src="http://elovalorant.com.br/images/minielo/Ferro_3.png" value="1WyQRsC">Conta Smurf Ferro</option> 
                               <option value="2pNZ38n">Conta Smurf Bronze</option> 
                               <option value="1nbWDSn">Conta Smurf Prata</option> 
 			      <option value="2Se3YAB">Conta Smurf Ouro</option>
@@ -314,6 +319,40 @@
     <script src="/js/core.js"></script>
     <script src="/js/init.js"></script>
     <script src="/js/contas.js"></script>
+	    
+    <!-- Select2 Imagens -->
+    <script>
+  $(document).ready(function() {
+    function formatOption(option) {
+      if (!option.id) {
+        return option.text;
+      }
+      const imgSrc = $(option.element).data('img-src');
+      const optionTemplate = $('<span><img src="' + imgSrc + '" class="img-icon" /> ' + option.text + '</span>');
+      return optionTemplate;
+    }
+
+    $('#my-select').select2({
+      templateResult: formatOption,
+      templateSelection: formatOption,
+      escapeMarkup: function(markup) {
+        return markup;
+      },
+    });
+  });
+</script>
+	    
+	    <style>
+  .img-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+</style>
+
+	    <!-- Fim Select2 Imagens -->
+	    
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-filters">
       <filter id="duotone_base">
         <feColorMatrix type="matrix" result="grayscale" values="1 0 0 0 0

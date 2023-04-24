@@ -355,5 +355,37 @@ window.addEventListener("DOMContentLoaded", function(){
         </feComponentTransfer>
       </filter>
     </svg>
+	    
+	    <!-- SCRIPT SOCIAL -->
+	    <script>
+  const userNames = ['João', 'Maria', 'Fulano', 'Beltrano', 'Ciclano'];
+  const proofSocial = document.getElementById('proofSocial');
+  const usernameElement = document.getElementById('username');
+  const timeElement = document.getElementById('time');
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function showProofSocial() {
+    const randomUser = userNames[getRandomInt(0, userNames.length - 1)];
+    const randomTime = getRandomInt(1, 60);
+
+    usernameElement.textContent = randomUser;
+    timeElement.textContent = randomTime;
+
+    proofSocial.classList.add('active');
+
+    setTimeout(() => {
+      proofSocial.classList.remove('active');
+    }, 5000);
+  }
+
+  setInterval(showProofSocial, 10000);
+</script>
+<!-- SCRIPT SOCIAL END -->
+	    
   </body>
 </html>

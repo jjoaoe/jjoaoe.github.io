@@ -275,7 +275,7 @@
 		<!-- Overlay / End -->
 		<!-- Social -->    
 		<div class="proof-social" id="proofSocial">
-		<span id="username"></span> acabou de comprar 1 <span id="product"></span> há <span id="time"></span> minutos atrás.
+		<span id="username"></span> comprou 1 <span id="product"></span> há <span id="time"></span> minutos atrás.
 		</div>
 		<!-- Social End -->  
 		<!-- Menu Panel -->
@@ -351,16 +351,21 @@
 		<!-- SCRIPT SOCIAL -->
 		<script>
 			const userNames = [
-			'Lucas', 'Gabriel', 'Pedro', 'Guilherme', 'João', 'Mateus', 'Miguel',
-			'Rafael', 'Henrique', 'Felipe', 'Gustavo', 'Diogo', 'Vinícius', 'Arthur',
-			'Eduardo', 'Rodrigo', 'Enzo', 'Bernardo', 'André', 'Thiago', 'Yago',
-			'Cauã', 'Caio', 'Vitor', 'Davi', 'Luan', 'Diego', 'Leonardo', 'Lucca',
-			'Heitor', 'Luiz', 'Carlos', 'Otávio', 'Ricardo', 'Marcelo', 'Antônio',
-			'Fernando', 'Leandro', 'Alexandre', 'Renan', 'Wesley', 'Murilo', 'Elton',
-			'Danilo', 'Samuel', 'Willian', 'Jean', 'Igor', 'Yuri', 'Vitor Hugo',
-			'Cássio', 'Nathan', 'Ryan', 'Breno', 'Giovanna', 'Maria Eduarda', 'Luana',
-			'Larissa', 'Bruna', 'Amanda', 'Camila'
-			];
+  'Lucas', 'Gabriel', 'Pedro', 'Guilherme', 'Matheus', 'Miguel', 'Rafael',
+  'Henrique', 'Felipe', 'Gustavo', 'Diogo', 'Vinícius', 'Arthur', 'Eduardo',
+  'Rodrigo', 'Enzo', 'Bernardo', 'André', 'Thiago', 'Yago', 'Cauã', 'Caio',
+  'Vitor', 'Davi', 'Luan', 'Diego', 'Leonardo', 'Lucca', 'Heitor', 'Luiz',
+  'Carlos', 'Otávio', 'Ricardo', 'Marcelo', 'Antônio', 'Fernando', 'Leandro',
+  'Alexandre', 'Renan', 'Wesley', 'Murilo', 'Elton', 'Danilo', 'Samuel',
+  'Willian', 'Jean', 'Igor', 'Yuri', 'Vitor Hugo', 'Cássio', 'Nathan', 'Ryan',
+  'Breno', 'Kaique', 'Raul', 'César', 'Márcio', 'Adriano', 'Erick', 'Elvis',
+  'Jonas', 'Israel', 'Iago', 'Natanael', 'Maycon', 'Matias', 'Giovanna',
+  'Maria Eduarda', 'Luana', 'Larissa', 'Bruna', 'Amanda', 'Camila', 'Júlia',
+  'Lívia', 'Rafaela', 'Isadora', 'Sabrina', 'Marina', 'Carolina', 'Mariana',
+  'Fernanda', 'Emanuelle', 'Aline', 'Alice', 'Vitória', 'Sophia', 'Letícia',
+  'Catarina', 'Lorena', 'Evelyn', 'Isabela', 'Melissa', 'Rebeca', 'Stefany'
+];
+
 			const products = [
 			  { name: 'Conta Básica', probability: 0.6 },
 			  { name: 'Conta Ferro', probability: 0.1 },
@@ -393,12 +398,12 @@
 			    }
 			  }
 			
-			  return 'Conta Básica'; // Caso algo dê errado, retorna a Conta Básica como padrão.
+			  return 'Conta Básica';
 			}
 			
 			function showProofSocial() {
 			  const randomUser = userNames[getRandomInt(0, userNames.length - 1)];
-			  const randomTime = getRandomInt(11, 120);
+			  const randomTime = getRandomInt(7, 59);
 			  const randomProduct = getRandomProduct();
 			
 			  usernameElement.textContent = randomUser;

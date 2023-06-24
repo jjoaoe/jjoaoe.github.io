@@ -28,22 +28,22 @@ function get_value_and_plan() {
     
     // Conta Bronze
     else if (partidas == '2pNZ38n') {
-        var valor = 'R$25'
+        var valor = 'R$29'
     }
     
     // Conta Prata
     else if (partidas == '1nbWDSn') {
-        var valor = 'R$27'
+        var valor = 'R$34'
     }
 
     // Conta Ouro
     else if (partidas == '2Se3YAB') {
-        var valor = 'R$29'
+        var valor = 'R$39'
     }
     
     // Conta Platina
     else if (partidas == '122YuJR') {
-        var valor = 'R$34'
+        var valor = 'R$44'
     }
     
     // Conta Diamante
@@ -58,7 +58,7 @@ function get_value_and_plan() {
     
     // Conta FA Ranked Liberada
     else if (partidas == '2X73zVH') {
-        var valor = 'R$59'
+        var valor = 'R$97'
     }
     
     else if (partidas == 'FerroPlus') {

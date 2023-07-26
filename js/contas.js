@@ -58,7 +58,7 @@ function get_value_and_plan() {
     
     // Conta FA Ranked Liberada
     else if (partidas == '2X73zVH') {
-        var valor = 'R$97'
+        var valor = 'R$149'
     }
     
     else if (partidas == 'FerroPlus') {

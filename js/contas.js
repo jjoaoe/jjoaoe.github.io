@@ -1,4 +1,3 @@
-// Define product data
 const products = {
   "basica": {price: 'R$14.90', id: '23obGFM'},
   "ferro": {price: 'R$39', id: '1WyQRsC'},

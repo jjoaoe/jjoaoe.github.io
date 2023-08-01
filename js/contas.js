@@ -1,51 +1,25 @@
-var planValues = {
-    '17j16Hw': 'R$14.90',
-    '1WyQRsC': 'R$34',
-    '2pNZ38n': 'R$29',
-    '1nbWDSn': 'R$34',
-    '2Se3YAB': 'R$39',
-    '122YuJR': 'R$44',
-    '2CXXrF4': 'R$45',
-    '1SaFdAY': 'R$50',
-    '2X73zVH': 'R$149',
-    'FerroPlus': 'R$49',
-    'FerroFull': 'R$94',
-    'BronzePlus': 'R$40',
-    'BronzeFull': 'R$94',
-    'SilverPlus': 'R$45',
-    'SilverFull': 'R$94',
-    'GoldPlus': 'R$50',
-    'GoldFull': 'R$94',
-    'PlatinaPlus': 'R$55',
-    'PlatinaFull': 'R$94',
-    'DiamantePlus': 'R$70',
-    'DiamanteFull': 'R$94',
-    'AscendentePlus': 'R$80',
-    'AscendenteFull': 'R$94',
-    'ImortalPlus': 'R$120',
-    'Imortal': 'R$60',
-    'ImortalFull': 'R$128',
-    'r': 'R$299',
-    'Skins1': 'R$597'
+// Define product data
+const products = {
+  "Conta Smurf Bronze": {price: 40, id: "1"},
+  "Conta Smurf Prata": {price: 50, id: "2"},
+  "Conta Smurf Ouro": {price: 60, id: "3"},
+  "Conta Smurf Platina": {price: 70, id: "4"},
+  "Conta Smurf Diamante": {price: 80, id: "5"},
+  "Conta Smurf Mestre": {price: 90, id: "6"},
+  "Conta Smurf Grão-Mestre": {price: 100, id: "7"},
+  "Conta Smurf Desafiante": {price: 110, id: "8"},
 };
 
-function get_value_and_plan() {
-    var select = document.getElementById('conta');
-    var conta = select.options[select.selectedIndex].value;
-    var valor = planValues[conta];
-    return {"valor": valor, "conta": conta}
-}
+function myFunction() {
+  // Get selected product
+  const selectedProduct = document.getElementById("mySelect").value;
 
-$('#conta').change(function() {
-    var config = get_value_and_plan()
-    $('#price').html(config["valor"])
-});
+  // Find product data
+  const productData = products[selectedProduct];
 
-function whats() {    
-    var config = get_value_and_plan()
+  // Update price display
+  document.getElementById("demo").innerHTML = "R$ " + productData.price;
 
-    var text = `${config["conta"]}`
-    var url = 'https://mpago.la/'.concat(text);
-
-    window.open(url);
+  // Update buy now button
+  document.getElementById("comprar").href = "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=" + productData.id;
 }

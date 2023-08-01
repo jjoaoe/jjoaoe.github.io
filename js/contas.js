@@ -1,14 +1,14 @@
 // Define product data
 const products = {
-  "basica": {price: '14.90', id: '17j16Hw'},
-  "ferro": {price: '35', id: '1WyQRsC'},
-  "bronze": {price: '99', id: 'ID Conta Smurf Bronze'},
-  "prata": {price: '99', id: 'ID Conta Smurf Prata'},
-  "ouro": {price: '99', id: 'ID Conta Smurf Ouro'},
-  "platina": {price: '99', id: 'ID Conta Smurf Platina'},
-  "diamante": {price: '99', id: 'ID Conta Smurf Diamante'},
-  "ascendente": {price: '99', id: 'ID Conta Smurf Ascendente'},
-  "fa": {price: 'R$149', id: '2X73zVH'},
+  "basica": {price: 'R$14.90', id: '17j16Hw'},
+  "ferro": {price: 'R$39', id: '1WyQRsC'},
+  "bronze": {price: 'R$34', id: '2pNZ38n'},
+  "prata": {price: 'R$30', id: '1nbWDSn'},
+  "ouro": {price: 'R$30', id: '2Se3YAB'},
+  "platina": {price: 'R$44', id: '122YuJR'},
+  "diamante": {price: 'R$45', id: '2CXXrF4'},
+  "ascendente": {price: 'R$50', id: '1SaFdAY'},
+  "fa": {price: 'R$147', id: '2QHW1jT'},
 };
 
 function updateProductInfo() {

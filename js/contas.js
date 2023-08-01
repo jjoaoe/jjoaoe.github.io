@@ -1,13 +1,14 @@
 // Define product data
 const products = {
-  "basica": {price: 'R$14.90', id: '17j16Hw'},
+  "basica": {price: 'R$14.90', id: '23obGFM'},
   "ferro": {price: 'R$39', id: '1WyQRsC'},
-  "bronze": {price: 'R$34', id: '2pNZ38n'},
-  "prata": {price: 'R$30', id: '1nbWDSn'},
-  "ouro": {price: 'R$30', id: '2Se3YAB'},
-  "platina": {price: 'R$44', id: '122YuJR'},
-  "diamante": {price: 'R$45', id: '2CXXrF4'},
-  "ascendente": {price: 'R$50', id: '1SaFdAY'},
+  "bronze": {price: 'R$34', id: '1mqpCc1'},
+  "prata": {price: 'R$30', id: '1wJtpFQ'},
+  "ouro": {price: 'R$30', id: '1RTXfGg'},
+  "platina": {price: 'R$44', id: '2Wp8ftD'},
+  "diamante": {price: 'R$45', id: '2BYALve'},
+  "ascendente": {price: 'R$57', id: '1nNTNzc'},
+  "imortal": {price: 'R$87', id: '1WXFsp8'},
   "fa": {price: 'R$147', id: '2QHW1jT'},
 };
 

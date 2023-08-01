@@ -46,7 +46,9 @@
 			  document.getElementById("visits").innerHTML = num
 			}
 		</script>
-		<!-- <script src="//code.jivosite.com/widget/EjI29ihL5U" async></script> -->
+		
+		<script src="https://sdk.mercadopago.com/js/v2"></script>
+		
 	</head>
 	<style>
 		.header-logo--img {
@@ -223,7 +225,7 @@
 												<div class="row">
 													<div class="mt-4" style="margin-top: 20px !important;">
 														<div class="d-grid gap-2">
-															<button onclick="comprar();gtag_report_conversion();" class="btn btn-success whats-buy" type="button">Compre agora!</button>
+															<button id="checkout-button" onclick="comprar();gtag_report_conversion();" class="btn btn-success whats-buy" type="button">Compre agora!</button>
 														</div>
 													</div>
 												</div>
@@ -333,6 +335,38 @@
 				</feComponentTransfer>
 			</filter>
 		</svg>
+<!-- SCRIPT CHECKOUT PREFERENCE ID -->
+		<button id="checkout-button">Compre Agora</button>
+
+<script>
+document.getElementById('checkout-button').addEventListener('click', function() {
+  // Chama o arquivo PHP para criar a preferência de pagamento
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://api.valorantsmurfs.com.br/create_preference.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.onreadystatechange = function() {
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      const mp = new MercadoPago('APP_USR-24416fdf-612b-4216-bace-78998516aa50', {
+        locale: 'pt-BR'
+      });
+
+      mp.checkout({
+        preference: {
+          id: this.responseText
+        },
+        render: {
+          container: '#checkout-button',  // Indica onde o botão de checkout será exibido
+          label: 'Compre Agora',  // Muda o texto do botão de checkout
+        },
+      });
+    }
+  }
+  xhr.send("title=Nome do Produto&price=100");
+});
+</script>
+<!-- SCRIPT CHECKOUT PREFERENCE ID -->
+
+		
 		<!-- SCR1PT SOC1AL -->
 		<script>
 			const userNames = [

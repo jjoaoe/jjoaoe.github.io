@@ -1,44 +1,17 @@
 // Define product data
 const products = {
-  "Conta Sem Elo (Ranked Liberada)": {
-    price: 14.90, 
-    id: "17j16Hw"
-  },
-  "Conta Smurf Ferro": {
-    price: 99, 
-    id: "1WyQRsC"
-  },
-  "Conta Smurf Bronze": {
-    price: 99, 
-    id: "2pNZ38n"
-  },
-  "1nbWDSn": {
-    price: 99, 
-    id: "1nbWDSn"
-  },
-  "Conta Smurf Ouro": {
-    price: 99, 
-    id: "2Se3YAB"
-  },
-  "Conta Smurf Platina": {
-    price: 99, 
-    id: "122YuJR"
-  },
-  "Conta Smurf Diamante": {
-    price: 99, 
-    id: "2CXXrF4"
-  },
-  "Conta Smurf Ascendente": {
-    price: 99, 
-    id: "1SaFdAY"
-  },
-  "Conta Sem Elo FULL ACCESS (Ranked Liberada)": {
-    price: 149, 
-    id: "2X73zVH"
-  },
+  "basica": {price: '14.90', id: '17j16Hw'},
+  "ferro": {price: '35', id: '1WyQRsC'},
+  "bronze": {price: '99', id: 'ID Conta Smurf Bronze'},
+  "prata": {price: '99', id: 'ID Conta Smurf Prata'},
+  "ouro": {price: '99', id: 'ID Conta Smurf Ouro'},
+  "platina": {price: '99', id: 'ID Conta Smurf Platina'},
+  "diamante": {price: '99', id: 'ID Conta Smurf Diamante'},
+  "ascendente": {price: '99', id: 'ID Conta Smurf Ascendente'},
+  "fa": {price: 'R$149', id: '2X73zVH'},
 };
 
-function myFunction() {
+function updateProductInfo() {
   // Get selected product
   const selectedProduct = document.getElementById("listaContas").value;
 
@@ -46,9 +19,16 @@ function myFunction() {
   const productData = products[selectedProduct];
 
   // Update price display
-  // You will need to add the actual prices for the products
-  document.getElementById("demo").innerHTML = "R$ " + productData.price;
-
-  // Update buy now button
-  document.getElementById("comprar").href = "https://mpago.la/" + productData.id;
+  document.getElementById("price").innerHTML = productData.price;
 }
+
+function comprar() {
+  // Get selected product
+  const selectedProduct = document.getElementById("listaContas").value;
+
+  // Open MercadoPago URL in a new tab
+  window.open("https://mpago.la/" + products[selectedProduct].id);
+}
+
+// Update product info when the selected product changes
+document.getElementById("listaContas").addEventListener("change", updateProductInfo);

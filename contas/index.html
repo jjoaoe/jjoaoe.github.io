@@ -351,7 +351,7 @@
   'Catarina', 'Lorena', 'Evelyn', 'Isabela', 'Melissa', 'Rebeca', 'Stefany'
 ];
 
-			const products = [
+			const productsSocial = [
 			  { name: 'Conta Básica', probability: 0.6 },
 			  { name: 'Conta Ferro', probability: 0.1 },
 			  { name: 'Conta Full Access', probability: 0.1 },
@@ -376,7 +376,7 @@
 			  const randomValue = Math.random();
 			  let accumulatedProbability = 0;
 			
-			  for (const product of products) {
+			  for (const product of productsSocial) {
 			    accumulatedProbability += product.probability;
 			    if (randomValue <= accumulatedProbability) {
 			      return product.name;

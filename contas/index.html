@@ -46,10 +46,7 @@
 			  document.getElementById("visits").innerHTML = num
 			}
 		</script>	
-		
-<script src="https://sdk.mercadopago.com/js/v2"></script>
-
-		
+			
 	</head>
 	<style>
 		.header-logo--img {
@@ -336,35 +333,6 @@
 				</feComponentTransfer>
 			</filter>
 		</svg>
-<!-- SCRIPT CHECKOUT PREFERENCE ID -->
-<script>
-document.getElementById('checkout-button').addEventListener('click', function() {
-  // Chama o arquivo PHP para criar a preferência de pagamento
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://api.valorantsmurfs.com.br/create_preference.php", true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.onreadystatechange = function() {
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-      const mp = new MercadoPago('APP_USR-24416fdf-612b-4216-bace-78998516aa50', {
-        locale: 'pt-BR'
-      });
-
-      mp.checkout({
-        preference: {
-          id: this.responseText
-        },
-        render: {
-          container: '#checkout-button',  // Indica onde o botão de checkout será exibido
-          label: 'Compre Agora',  // Muda o texto do botão de checkout
-        },
-      });
-    }
-  }
-  xhr.send("title=Nome do Produto&price=100");
-});
-</script>
-<!-- SCRIPT CHECKOUT PREFERENCE ID -->
-
 		
 		<!-- SCR1PT SOC1AL -->
 		<script>
@@ -383,58 +351,40 @@ document.getElementById('checkout-button').addEventListener('click', function() 
   'Fernanda', 'Emanuelle', 'Aline', 'Alice', 'Vitória', 'Sophia', 'Letícia',
   'Catarina', 'Lorena', 'Evelyn', 'Isabela', 'Melissa', 'Rebeca', 'Stefany'
 ];
-
 			const productsSocial = [
-			  { name: 'Conta Básica', probability: 0.6 },
-			  { name: 'Conta Ferro', probability: 0.1 },
-			  { name: 'Conta Full Access', probability: 0.1 },
-			  { name: 'Conta Prata', probability: 0.05 },
-			  { name: 'Conta Ouro', probability: 0.05 },
-			  { name: 'Conta Platina', probability: 0.025 },
-			  { name: 'Conta Diamante', probability: 0.025 },
-			];
-			
+			  { name: 'Conta Básica', probability: 0.6 },{ name: 'Conta Ferro', probability: 0.1 },{ name: 'Conta Full Access', probability: 0.1 },{ name: 'Conta Prata', probability: 0.05 },{ name: 'Conta Ouro', probability: 0.05 },{ name: 'Conta Platina', probability: 0.025 },{ name: 'Conta Diamante', probability: 0.025 },];
 			const proofSocial = document.getElementById('proofSocial');
 			const usernameElement = document.getElementById('username');
 			const timeElement = document.getElementById('time');
 			const productElement = document.getElementById('product');
-			
 			function getRandomInt(min, max) {
 			  min = Math.ceil(min);
 			  max = Math.floor(max);
 			  return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
-			
 			function getRandomProduct() {
 			  const randomValue = Math.random();
 			  let accumulatedProbability = 0;
-			
 			  for (const product of productsSocial) {
 			    accumulatedProbability += product.probability;
 			    if (randomValue <= accumulatedProbability) {
 			      return product.name;
 			    }
 			  }
-			
 			  return 'Conta Básica';
 			}
-			
 			function showProofSocial() {
 			  const randomUser = userNames[getRandomInt(0, userNames.length - 1)];
 			  const randomTime = getRandomInt(7, 59);
 			  const randomProduct = getRandomProduct();
-			
 			  usernameElement.textContent = randomUser;
 			  timeElement.textContent = randomTime;
 			  productElement.textContent = randomProduct;
-			
 			  proofSocial.classList.add('active');
-			
 			  setTimeout(() => {
 			    proofSocial.classList.remove('active');
 			  }, 5000);
 			}
-			
 			setInterval(showProofSocial, 15000);
 		</script>
 		<!-- SCRIPT SOCIAL END -->

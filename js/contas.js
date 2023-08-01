@@ -12,7 +12,7 @@ const products = {
     price: 99, 
     id: "2pNZ38n"
   },
-  "Conta Smurf Prata": {
+  "1nbWDSn": {
     price: 99, 
     id: "1nbWDSn"
   },

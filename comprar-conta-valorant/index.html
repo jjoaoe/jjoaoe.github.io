@@ -45,8 +45,8 @@
 			  var num = Math.round((max - min) * Math.random() + min)
 			  document.getElementById("visits").innerHTML = num
 			}
-		</script>
-		<!-- <script src="//code.jivosite.com/widget/EjI29ihL5U" async></script> -->
+		</script>	
+			
 	</head>
 	<style>
 		.header-logo--img {
@@ -194,32 +194,20 @@
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
-													<select id="partidas" name="ct" class="form-control">
-														<!-- <option value="none" disabled>// CONTAS BÁSICAS</option>
-														<option value="17j16Hw">Conta Sem Elo (Ranked Liberada)</option> -->
+													<select id="listaContas" name="ct" class="form-control">
+														<option value="none" disabled>// CONTAS BÁSICAS</option>
+														<option value="basica">Conta Sem Elo (Ranked Liberada)</option>
 														<option value="none2" disabled>// CONTAS POR ELO</option>
-														<!-- <option value="1WyQRsC">Conta Smurf Ferro</option> -->
-														<option value="2pNZ38n">Conta Smurf Bronze</option>
-														<option value="1nbWDSn">Conta Smurf Prata</option>
-														<option value="2Se3YAB">Conta Smurf Ouro</option>
-														<option value="122YuJR">Conta Smurf Platina</option>
-														<!-- <option value="2CXXrF4">Conta Smurf Diamante</option>
-															<option value="1SaFdAY">Conta Smurf Ascendente</option> -->
-														<!-- <option value="Imortal">Conta Smurf Imortal</option> -->
-														<!-- <option value="FerroPlus">Conta Smurf+ Ferro</option>
-															<option value="BronzePlus">Conta Smurf+ Bronze</option>
-															<option value="SilverPlus">Conta Smurf+ Prata</option>
-															<option value="GoldPlus">Conta Smurf+ Ouro</option>
-															<option value="PlatinaPlus">Conta Smurf+ Platina</option>
-															<option value="DiamantePlus">Conta Smurf+ Diamante</option> -->
-														<!--	<option value="AscendentePlus">Conta Smurf+ Ascendente</option> -->
+														<option value="ferro">Conta Smurf Ferro</option>
+														<option value="bronze">Conta Smurf Bronze</option>
+														<option value="prata">Conta Smurf Prata</option>
+														<option value="ouro">Conta Smurf Ouro</option>
+														<option value="platina">Conta Smurf Platina</option>
+														<option value="diamante">Conta Smurf Diamante</option>
+														<option value="ascendente">Conta Smurf Ascendente</option>
+														<option value="imortal">Conta Smurf Imortal</option>
 														<option value="none3" disabled>// CONTAS PREMIUM FULL ACCESS</option>
-														<option selected="" value="2X73zVH">Conta Sem Elo FULL ACCESS (Ranked Liberada)</option>
-														<!-- <option value="Skins3">Conta c/ Skins FULL ACESSO (R$1082 gastos na loja) [armas+facas]</option> -->
-														<!--	<option value="BronzeFull">Conta Premium Bronze [FullAcesso]</option><option value="SilverFull">Conta Premium Prata [FullAcesso]</option><option value="GoldFull">Conta Premium Ouro [FullAcesso]</option><option value="PlatinaFull">Conta Premium Platina [FullAcesso]</option> -->
-														<!--
-															<option selected="" value="b1">Bronze 1</option><option value="b2">Bronze 2</option><option value="b3">Bronze 3</option><option value="s1">Prata 1</option><option value="s2">Prata 2</option><option value="s3">Prata 3</option><option value="g1">Ouro 1</option><option value="g2">Ouro 2</option><option value="g3">Ouro 3</option><option value="p1">Platina 1</option><option value="p2">Platina 2</option><option value="p3">Platina 3</option><option value="d1">Diamante 1</option><option value="d2">Diamante 2</option><option value="d3">Diamante 3</option><option value="i1">Imortal 1</option><option value="i2">Imortal 2</option><option value="i3">Imortal 3</option><option value="r">Radiante</option>
-															-->
+														<option selected="" value="fa">Conta Sem Elo FULL ACCESS (Ranked Liberada)</option>
 													</select>
 												</div>
 											</div>
@@ -230,12 +218,12 @@
 											<div class="offer__content text-center" style="margin-bottom: 20px;">
 												<div class="form_group text-center">
 													<h4 class="valor fix-spacing mt-4" id="price" valor-inicial="0">
-													R$97</h4Fcom>
+													R$149</h4>
 												</div>
 												<div class="row">
 													<div class="mt-4" style="margin-top: 20px !important;">
 														<div class="d-grid gap-2">
-															<button onclick="whats();gtag_report_conversion();" class="btn btn-success whats-buy" type="button">Compre agora!</button>
+															<button id="checkout-button" onclick="comprar();gtag_report_conversion();" class="btn btn-success whats-buy" type="button">Compre agora!</button>
 														</div>
 													</div>
 												</div>
@@ -345,7 +333,8 @@
 				</feComponentTransfer>
 			</filter>
 		</svg>
-		<!-- SCRIPT SOCIAL -->
+		
+		<!-- SCR1PT SOC1AL -->
 		<script>
 			const userNames = [
   'Lucas', 'Gabriel', 'Pedro', 'Guilherme', 'Matheus', 'Miguel', 'Rafael',
@@ -362,58 +351,40 @@
   'Fernanda', 'Emanuelle', 'Aline', 'Alice', 'Vitória', 'Sophia', 'Letícia',
   'Catarina', 'Lorena', 'Evelyn', 'Isabela', 'Melissa', 'Rebeca', 'Stefany'
 ];
-
-			const products = [
-			  { name: 'Conta Básica', probability: 0.6 },
-			  { name: 'Conta Ferro', probability: 0.1 },
-			  { name: 'Conta Full Access', probability: 0.1 },
-			  { name: 'Conta Prata', probability: 0.05 },
-			  { name: 'Conta Ouro', probability: 0.05 },
-			  { name: 'Conta Platina', probability: 0.025 },
-			  { name: 'Conta Diamante', probability: 0.025 },
-			];
-			
+			const productsSocial = [
+			  { name: 'Conta Básica', probability: 0.6 },{ name: 'Conta Ferro', probability: 0.1 },{ name: 'Conta Full Access', probability: 0.1 },{ name: 'Conta Prata', probability: 0.05 },{ name: 'Conta Ouro', probability: 0.05 },{ name: 'Conta Platina', probability: 0.025 },{ name: 'Conta Diamante', probability: 0.025 },];
 			const proofSocial = document.getElementById('proofSocial');
 			const usernameElement = document.getElementById('username');
 			const timeElement = document.getElementById('time');
 			const productElement = document.getElementById('product');
-			
 			function getRandomInt(min, max) {
 			  min = Math.ceil(min);
 			  max = Math.floor(max);
 			  return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
-			
 			function getRandomProduct() {
 			  const randomValue = Math.random();
 			  let accumulatedProbability = 0;
-			
-			  for (const product of products) {
+			  for (const product of productsSocial) {
 			    accumulatedProbability += product.probability;
 			    if (randomValue <= accumulatedProbability) {
 			      return product.name;
 			    }
 			  }
-			
 			  return 'Conta Básica';
 			}
-			
 			function showProofSocial() {
 			  const randomUser = userNames[getRandomInt(0, userNames.length - 1)];
 			  const randomTime = getRandomInt(7, 59);
 			  const randomProduct = getRandomProduct();
-			
 			  usernameElement.textContent = randomUser;
 			  timeElement.textContent = randomTime;
 			  productElement.textContent = randomProduct;
-			
 			  proofSocial.classList.add('active');
-			
 			  setTimeout(() => {
 			    proofSocial.classList.remove('active');
 			  }, 5000);
 			}
-			
 			setInterval(showProofSocial, 15000);
 		</script>
 		<!-- SCRIPT SOCIAL END -->

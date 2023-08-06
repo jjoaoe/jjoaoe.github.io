@@ -84,13 +84,18 @@
   }
 
   window.onload = function() {
-      var paymentId = getParameterByName('payment_id');
-      if(paymentId) {
-          var sanitizedId = sanitizeInput(paymentId);
-          var btn = document.getElementById('whatsButton');
-          btn.setAttribute('onclick', "location.href='https://wa.me/551132308225?text=Compra ID " + sanitizedId + "aaa ';");
-      }
-  }
+    var paymentId = getParameterByName('payment_id');
+    if(paymentId) {
+        var sanitizedId = sanitizeInput(paymentId);
+        
+        // Definindo o ID no botão
+        var btn = document.getElementById('whatsButton');
+        btn.setAttribute('onclick', "location.href='https://wa.me/551132308225?text=Compra ID " + sanitizedId + " - receber';");
+        
+        // Exibindo o ID no h1
+        document.getElementById('paymentIdDisplay').innerText = sanitizedId;
+    }
+}
 </script>
 
   <style>
@@ -187,7 +192,7 @@
             <div id="elojob" class="offer-area offer-area-3 pt-100 pb-100" data-background="images/bg.png" style="background-image: url(&quot;images/bg.png&quot;);">
               <div class="container">               
                 <div class="generic-title text-center mb-5">
-                  <h4>Pedido ID <div id="paymentIdDisplay"></div> ✅</h4><br>
+                  <h4>Pedido ID <span id="paymentIdDisplay"></span> ✅</h4><br>
                   <h5>Estamos quase lá!</h5>
                   <span><br><b>Seu pagamento está sendo processado... ⌛</b><br><br><p>Assim que aprovado, você receberá automaticamente por email os seus dados de acesso. É só aguardar :)</p><p><b>Ah, e caso deseje receber via WhatsApp, é só clicar no botão abaixo e informar o ID do seu pedido!<b></b></b></p></span>
                 </div>
@@ -199,7 +204,6 @@
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          
                         </div>
                       </div>
                     </div>

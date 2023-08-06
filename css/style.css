@@ -13852,7 +13852,7 @@ div.cs-select:focus {
   }
   .btn,
   .button {
-    padding: 1.1875rem 3.25rem;
+    /* padding: 1.1875rem 3.25rem; */
     font-size: 1.125rem;
     line-height: 1;
   }

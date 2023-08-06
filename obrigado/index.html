@@ -22,14 +22,6 @@
     <link href="/css/brands.css">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
-    <script type="text/javascript">
-      onload = function() {
-        var min = 5
-        var max = 14
-        var num = Math.round((max - min) * Math.random() + min)
-        document.getElementById("visits").innerHTML = num
-      }
-    </script>
     <!-- Google tag (gtag.js) [ANALYTICS] -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-018Y37E5DC"></script>
     <script>
@@ -67,6 +59,24 @@
         return false;
       }
     </script>
+
+<!-- Lê o ID da Compra -->
+<script>
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  window.onload = function() {
+      var paymentId = getParameterByName('payment_id');
+      if(paymentId) {
+          document.getElementById('paymentIdDisplay').innerText = paymentId;
+      }
+  }
+</script>
+
   <style>
     .header-logo--img {
       width: 60px !important;
@@ -165,7 +175,8 @@
                 
                 
                 <div class="generic-title text-center mb-5">
-                  <h3 class="text-black mb-2">Seu pagamento foi processado ✅</h3>
+                  <h3 class="text-black mb-2">Seu pagamento foi processado ✅</h3><br>
+                  <h4 id="paymentIdDisplay" class="text-black mb-2">ID </h4>
                   <span><br><b>Assim que o pagamento for aprovado, você receberá automaticamente em seu email os dados da conta. Para receber seus dados de acesso manualmente siga as instruções abaixo:</b></span>
 		  <span><br>1. Clique no botão abaixo para ir para nosso WhatsApp</span>
           <span><br>2. Informe o ID da Compra de seu pagamento</span>

@@ -32,3 +32,13 @@ function comprar() {
 
 // Update product info when the selected product changes
 document.getElementById("listaContas").addEventListener("change", updateProductInfo);
+
+$(document).ready(function() {
+  $('#ct').change(function() {
+      $('.bton').show();
+
+      var src = $(this).find('option:selected').attr('data-img');
+      $('img#eloa').attr('src', src);
+      $(".form-check-input").prop("checked", false);
+  });
+});

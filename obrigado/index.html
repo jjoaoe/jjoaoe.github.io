@@ -92,7 +92,7 @@
         
         // Definindo o ID no botão
         var btn = document.getElementById('whatsButton');
-        btn.setAttribute('onclick', "location.href='https://wa.me/551132308225?text=Ol%C3%A1%2C%20desejo%20receber%20os%20dados%20de%20acesso%20de%20minha%20compra%3A%0A%0AID%20do%20Pedido%3A%20" + sanitizedId + "%0A%0AProduto%3A%20" + sanitizeInput(externalReference) + "';");
+        btn.setAttribute('onclick', "location.href='https://wa.me/551132308225?text=Ol%C3%A1%2C%20desejo%20receber%20os%20dados%20de%20acesso%20de%20minha%20compra%3A%0A%0AID%20do%20Pedido%3A%20" + sanitizedId + "%0A%0AProduto%3A%20Conta%20" + sanitizeInput(externalReference) + "';");
         
         // Exibindo o ID no h1
         document.getElementById('paymentIdDisplay').innerText = sanitizedId;

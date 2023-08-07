@@ -34,7 +34,7 @@ function comprar() {
 document.getElementById("listaContas").addEventListener("change", updateProductInfo);
 
 $(document).ready(function() {
-  $('#ct').change(function() {
+  $('#listaContas').change(function() {
       $('.bton').show();
 
       var src = $(this).find('option:selected').attr('data-img');

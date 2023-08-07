@@ -85,15 +85,27 @@
 
   window.onload = function() {
     var paymentId = getParameterByName('payment_id');
+    var externalReference = getParameterByName('external_reference');
+    
     if(paymentId) {
         var sanitizedId = sanitizeInput(paymentId);
         
         // Definindo o ID no botão
         var btn = document.getElementById('whatsButton');
-        btn.setAttribute('onclick', "location.href='https://wa.me/551132308225?text=Ol%C3%A1%2C%20desejo%20receber%20os%20dados%20de%20acesso%20de%20minha%20compra%3A%0A%0AID%20do%20Pedido%3A%20" + sanitizedId + "';");
+        btn.setAttribute('onclick', "location.href='https://wa.me/551132308225?text=Ol%C3%A1%2C%20desejo%20receber%20os%20dados%20de%20acesso%20de%20minha%20compra%3A%0A%0AID%20do%20Pedido%3A%20" + sanitizedId + "%0A%0AProduto%3A%20" + sanitizeInput(externalReference) + "';");
         
         // Exibindo o ID no h1
         document.getElementById('paymentIdDisplay').innerText = sanitizedId;
+    }
+    
+    if(externalReference) {
+        var sanitizedRef = sanitizeInput(externalReference);
+        
+        // Exibindo a referência externa no h1
+        document.getElementById('externalReferenceDisplay').innerText = sanitizedRef;
+        
+        // Definindo o src da imagem
+        document.getElementById('externalReferenceImage').src = "https://valorantsmurfs.com.br/img/elos/" + sanitizedRef + ".png";
     }
 }
 </script>
@@ -130,7 +142,7 @@
   </style><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11080813793/?random=1677381186288&amp;cv=11&amp;fst=1677381186288&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be32m0&amp;u_w=1280&amp;u_h=800&amp;hn=www.googleadservices.com&amp;frm=0&amp;url=https%3A%2F%2Fvalorantsmurfs.com.br%2Fcontas%2F&amp;tiba=Contas%20%7C%20Valorant%20Smurfs&amp;auid=192019059.1674969814&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><link rel="stylesheet" href="https://code.jivosite.com/css/c65dd40/widget.css" class="jv-css"></head>
   
   <body class="scroll-is--active">
-    <a class="zap-fixed" href="http://api.whatsapp.com/send?1=pt_BR&amp;phone=551132308225&amp;text=Vim%20pelo%20site,%20preciso%20de%20ajuda%20" target="_blank">
+    <a class="zap-fixed" href="https://wa.me/551132308225?text=Vim%20pelo%20site,%20preciso%20de%20ajuda%20" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
     
@@ -193,6 +205,7 @@
               <div class="container">               
                 <div class="generic-title text-center mb-5">
                   <h4>Pedido ID <span id="paymentIdDisplay"></span> ✅</h4><br>
+                  <img id="externalReferenceImage" style="width: 200px;" src=""><br>
                   <h5>Estamos quase lá!</h5>
                   <span><br><b>Seu pagamento está sendo processado... ⌛</b><br><br><p>Assim que aprovado, você receberá automaticamente por email os seus dados de acesso. É só aguardar :)</p><p><b>Ah, e caso deseje receber via WhatsApp, é só clicar no botão abaixo e informar o ID do seu pedido!<b></b></b></p></span>
                 </div>
@@ -226,11 +239,7 @@
                 </div>
               </div>
             </div>
-            
             <div class="page-content">
-              
-              
-              
             </div>
           </div>
       </div></main>

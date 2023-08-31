@@ -8,7 +8,7 @@ const products = {
   "diamante": {price: 'R$45', id: '2BYALve'},
   "ascendente": {price: 'R$57', id: '1nNTNzc'},
   "imortal": {price: 'R$87', id: '1WXFsp8'},
-  "fa": {price: 'R$147', id: '2QHW1jT'},
+  "fa": {price: 'R$97', id: '2QHW1jT'},
 };
 
 function updateProductInfo() {

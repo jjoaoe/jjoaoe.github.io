@@ -1,6 +1,6 @@
 const products = {
   "basica": {price: 'R$14.90', id: '23obGFM'},
-  "ferro": {price: 'R$39', id: '1WyQRsC'},
+  "ferro": {price: 'R$64', id: '1WyQRsC'},
   "bronze": {price: 'R$34', id: '1mqpCc1'},
   "prata": {price: 'R$29', id: '1wJtpFQ'},
   "ouro": {price: 'R$30', id: '1RTXfGg'},

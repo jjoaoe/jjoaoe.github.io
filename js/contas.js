@@ -1,14 +1,14 @@
 const products = {
   "basica": {price: 'R$9.90', id: '23obGFM'},
-  "ferro": {price: 'R$49', id: '1WyQRsC'},
-  "bronze": {price: 'R$29', id: '1mqpCc1'},
-  "prata": {price: 'R$27', id: '1wJtpFQ'},
-  "ouro": {price: 'R$24', id: '1RTXfGg'},
-  "platina": {price: 'R$34', id: '2Wp8ftD'},
-  "diamante": {price: 'R$49', id: '2BYALve'},
-  "ascendente": {price: 'R$57', id: '1nNTNzc'},
-  "imortal": {price: 'R$87', id: '1WXFsp8'},
-  "fa": {price: 'R$97', id: '2QHW1jT'},
+  "ferro": {price: 'R$49', id: '1u82wHn'},
+  "bronze": {price: 'R$29', id: '1JZaJFs'},
+  "prata": {price: 'R$27', id: '2wu848W'},
+  "ouro": {price: 'R$24', id: '2En5ReP'},
+  "platina": {price: 'R$34', id: '2EzvuAe'},
+  "diamante": {price: 'R$49', id: '1Xur6Gr'},
+  "ascendente": {price: 'R$57', id: '23myHSd'},
+  "imortal": {price: 'R$87', id: '2XNhwZ3'},
+  "fa": {price: 'R$97', id: '24bRrGW'},
 };
 
 function updateProductInfo() {

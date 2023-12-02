@@ -1,5 +1,5 @@
 const products = {
-  "basica": {price: 'R$14.90', id: '2eV2XoR'},
+  "basica": {price: 'R$14.90', id: '2f8HQcZ'},
   "ferro": {price: 'R$49', id: '1u82wHn'},
   "bronze": {price: 'R$29', id: '1JZaJFs'},
   "prata": {price: 'R$27', id: '2wu848W'},

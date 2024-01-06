@@ -5,7 +5,7 @@ const products = {
   "prata": {price: 'R$27', id: '2G2RNLE'},
   "ouro": {price: 'R$24', id: '19MusVn'},
   "platina": {price: 'R$34', id: '1KXMhob'},
-  "diamante": {price: 'R$49', id: '1Xur6Gr'},
+  "diamante": {price: 'R$49', id: '1vT2tTm'},
   "ascendente": {price: 'R$57', id: '23myHSd'},
   "imortal": {price: 'R$87', id: '2XNhwZ3'},
   "fa": {price: 'R$97', id: '24bRrGW'},
